@@ -1,0 +1,22 @@
+/*--------------------------------------------------------------
+# Colors
+--------------------------------------------------------------*/
+
+$colors: (
+    blue: #1779ba, // like
+    red: #ba4335, // like
+    brown: #c39168, // like
+    purple: #9235ba,
+);
+
+@function get-color($key) {
+
+    @if map-has-key($colors, $key) {
+      @return map-get($colors, $key);
+    }
+
+    @else {
+      @error 'given $key is not available in $colors';
+    }
+
+}
