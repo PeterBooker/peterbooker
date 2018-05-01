@@ -1,0 +1,25 @@
+/*--------------------------------------------------------------
+# Utils
+--------------------------------------------------------------*/
+
+@mixin clearfix {
+    &::before,
+    &::after {
+      display: table;
+      content: ' ';
+  
+      @if $global-flexbox {
+        flex-basis: 0;
+        order: 1;
+      }
+    }
+  
+    &::after {
+      clear: both;
+    }
+}
+
+@function rem-calc($size) {
+  $remSize: $size / $base-font-size;
+  @return #{$remSize}rem;
+}

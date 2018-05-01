@@ -1,0 +1,29 @@
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+.site-footer {
+    background-color: $footer-bg;
+    margin-top: rem-calc(32);
+
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+    a:hover,
+    a:active,
+    a:focus {
+        text-decoration: underline;
+    }
+}
+
+.site-info {
+    margin: rem-calc(32) 0;
+
+    p {
+        text-align: center;
+        color: lighten($footer-bg, 25%);
+        width: 100%;
+        margin: 0;
+    }
+}

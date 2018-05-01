@@ -7,19 +7,42 @@ input,
 select,
 optgroup,
 textarea {
-	color: #404040;
-	font-family: sans-serif;
-	font-size: 16px;
+	color: $body-font-color;
+	font-family: $body-font-family;
+	font-size: rem-calc($base-font-size);
 	font-size: 1rem;
 	line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+	color: $header-color;
+	margin: 0 0 1em 0;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+}
+
+// Header Sizes
+@each $header, $header-defs in $header-styles-small {
+  #{$header} {
+    font-size: rem-calc(map-get($header-defs, font-size));
+  }
+}
+
+@each $header, $header-defs in $header-styles-medium {
+  @include medium-up() {
+    #{$header} {
+      font-size: rem-calc(map-get($header-defs, font-size));
+    }
+  }
 }
 
 p {
 	margin-bottom: 1.5em;
+  font-size: inherit;
+  line-height: 1.6;
+	text-rendering: optimizeLegibility;
+	width: 100%;
 }
 
 dfn, cite, em, i {
@@ -35,15 +58,15 @@ address {
 }
 
 pre {
+	display: block;
 	background: #eee;
 	font-family: "Courier 10 Pitch", Courier, monospace;
-	font-size: 15px;
-	font-size: 0.9375rem;
+	font-size: rem-calc(16);
 	line-height: 1.6;
-	margin-bottom: 1.6em;
+	margin: 0 0 rem-calc(16) 0;
 	max-width: 100%;
 	overflow: auto;
-	padding: 1.6em;
+	padding: rem-calc(16);
 }
 
 code, kbd, tt, var {

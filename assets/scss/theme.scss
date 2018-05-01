@@ -1,13 +1,22 @@
 /*--------------------------------------------------------------
 # Root Theme File
 --------------------------------------------------------------*/
+@charset "UTF-8";
+
+@import "theme/settings";
 
 @import "misc/fonts";
 @import "misc/colors";
+@import "misc/utils";
 
+@import "theme/grid";
+@import "theme/global";
+@import "theme/menus";
 @import "theme/accessibility";
 @import "theme/content";
 @import "theme/normalize";
-@import "theme/theme";
+@import "theme/general";
 @import "theme/typography";
 @import "theme/wordpress";
+@import "theme/header";
+@import "theme/footer";
