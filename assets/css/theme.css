@@ -456,6 +456,15 @@ textarea {
     width: 100%;
     color: #fff;
     text-align: center; }
+    .archive-header .archive-title a,
+    .archive-header .archive-subtitle a {
+      color: #fff; }
+    .archive-header .archive-title a:hover,
+    .archive-header .archive-title a:focus,
+    .archive-header .archive-subtitle a:hover,
+    .archive-header .archive-subtitle a:focus {
+      color: #fff;
+      text-decoration: underline; }
 
 .single-post .post-title,
 .page .post-title {

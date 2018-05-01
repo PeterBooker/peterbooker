@@ -89,6 +89,14 @@
         width: 100%;
         color: #fff;
         text-align: center;
+        a {
+            color: #fff;
+        }
+        a:hover,
+        a:focus {
+            color: #fff;
+            text-decoration: underline;
+        }
     }
 }
 
