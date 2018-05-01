@@ -245,14 +245,6 @@ article.type-post {
         }
     }
 }
-@include medium-up() {
-    .mywork {
-        //margin: 0 rem-calc(-36);
-        .work {
-            //margin: 0 rem-calc(36) rem-calc(36) rem-calc(36);
-        }
-    }
-}
 @include large-up() {
     .mywork {
         margin: 0 rem-calc(-36);
