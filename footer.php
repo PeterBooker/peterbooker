@@ -11,24 +11,18 @@
 
 ?>
 
-	</div><!-- #content -->
+	</div><!-- .box .small-12 -->
+</section><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'pb' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'pb' ), 'WordPress' );
-				?>
-			</a>
+<footer id="footer" class="site-footer">
+	<div class="grid padding container">
+		<div class="site-info box small-12">
+			<p>Powered by <a href="https://wordpress.org/" target="_blank">WordPress</a>
 			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'pb' ), 'pb', '<a href="https://www.peterbooker.com">Peter Booker</a>' );
-				?>
+			Theme by <a href="https://www.peterbooker.com/">Peter Booker</a></p>
 		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+	</div>
+</footer>
 
 <?php wp_footer(); ?>
 

@@ -10,44 +10,57 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
-
+<div class="archive-header">
+	<div class="grid container">
+		<div class="box small-12">
 			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+			the_archive_title( '<h1 class="archive-title">', '</h1>' );
+			the_archive_description( '<h4 class="archive-subtitle">', '</h4>' );
+			?>
+		</div>
+	</div>
+</div>
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+<div class="curve"></div>
+	
+<div class="content-area">
+	<div class="grid container">
 
-			endwhile;
+		<div id="primary" class="content box small-12 medium-8 large-9">
+			<main id="main" class="site-main grid container">
 
-			the_posts_navigation();
+			<?php if ( have_posts() ) : ?>
 
-		else :
+				<?php
+				/* Start the Loop */
+				while ( have_posts() ) :
+					the_post();
 
-			get_template_part( 'template-parts/content', 'none' );
+					/*
+					* Include the Post-Type-specific template for the content.
+					* If you want to override this in a child theme, then include a file
+					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+					*/
+					get_template_part( 'template-parts/content', get_post_type() );
 
-		endif;
-		?>
+				endwhile;
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+				//the_posts_navigation();
+
+			else :
+
+				get_template_part( 'template-parts/content', 'none' );
+
+			endif;
+			?>
+
+			</main><!-- #main -->
+		</div><!-- #primary -->
+
+		<?php get_sidebar(); ?>
+		
+	</div><!-- .grid .container -->
+</div><!-- .content-area -->
 
 <?php
-get_sidebar();
 get_footer();

@@ -21,38 +21,42 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pb' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$pb_description = get_bloginfo( 'description', 'display' );
-			if ( $pb_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $pb_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pb' ); ?></a>
 
+<header id="header" class="site-header">
+
+	<div class="title-bar container">
+		<a class="title" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Peter Booker Title">Peter Booker</a>
+		<a class="menu-toggle toggle" aria-controls="primary-menu" aria-expanded="false">
+			<div class="toggle-box">
+				<div class="toggle-inner"></div>
+			</div>
+		</a>
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'pb' ); ?></button>
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
 				'menu_id'        => 'primary-menu',
 			) );
 			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+		</nav><!-- .main-navigation -->
+		<div class="contact">
+			<hr>
+			<?php $email = antispambot( 'mail@peterbooker.com' ); ?>
+			<p>
+				Want to talk? Send me a message:<br>
+				<a href="<?php echo esc_url( sprintf( 'mailto:%s', $email ), array( 'mailto' ) ); ?>"><?php echo esc_html( $email ); ?></a>
+			</p>
+			<ul class="social-links">
+				<li><a href="https://www.twitter.com/peter_booker/" target="_blank">Twitter</a></li>
+				<li><a href="https://www.reddit.com/user/peterbooker/">Reddit</a></li>
+				<li><a href="https://github.com/PeterBooker/">Github</a></li>
+			</ul>
+		</div><!-- .contact -->
+	</div>
 
-	<div id="content" class="site-content">
+</header>
+
+<section id="content" class="site-content grid">
+	<div class="box small-12">

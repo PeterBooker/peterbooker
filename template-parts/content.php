@@ -10,28 +10,40 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
 
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				pb_posted_on();
-				pb_posted_by();
+	<div class="post-title grid">
+		<div class="box small-12">
+
+		<header class="entry-header">
+			<?php
+			if ( is_singular() ) :
+				the_title( '<h1 class="entry-title">', '</h1>' );
+			else :
+				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			endif;
+
+			if ( 'post' === get_post_type() ) :
 				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+				<div class="entry-meta">
+					<?php
+					pb_posted_on();
+					pb_posted_by();
+					?>
+				</div><!-- .entry-meta -->
+			<?php endif; ?>
+		</header><!-- .entry-header -->
+
+		</div>
+	</div>
+
+	<?php if ( is_singular() ) : ?>
+	<div class="curve"></div>
+	<?php endif; ?>
 
 	<?php pb_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="entry-content grid container">
+		<div class="box small-12">
 		<?php
 		the_content( sprintf(
 			wp_kses(
@@ -51,9 +63,12 @@
 			'after'  => '</div>',
 		) );
 		?>
+		</div>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+	<footer class="entry-footer grid container">
+		<div class="box small-12">
 		<?php pb_entry_footer(); ?>
+		</div>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
