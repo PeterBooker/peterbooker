@@ -19,7 +19,7 @@ get_header();
 	<div class="grid container">
 		<div class="box small-12">
 			<h1 class="archive-title">Hi, I make web stuff.</h1>
-			<h4 class="archive-subtitle">See my work or read my thoughts below.</h4>
+			<h4 class="archive-subtitle">View <a href="<?php echo esc_url( home_url( '/mywork/' ) ); ?>" title="My Work">my work</a> or read my thoughts below.</h4>
 		</div>
 	</div>
 </div>
