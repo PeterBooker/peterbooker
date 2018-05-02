@@ -553,8 +553,6 @@ article.type-post {
     content: "\f323"; }
   article.type-post .comments-link:before {
     content: "\f101"; }
-  article.type-post pre {
-    background-color: #dedede; }
 
 .single-post article.type-post .posted-on a,
 .single-post article.type-post .author a {
@@ -1179,7 +1177,7 @@ address {
 
 pre {
   display: block;
-  background: #eee;
+  background-color: #e7e7e7;
   font-family: "Courier 10 Pitch", Courier, monospace;
   font-size: 0.88889rem;
   line-height: 1.6;
