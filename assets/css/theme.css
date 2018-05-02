@@ -957,6 +957,10 @@ hr {
   height: 1px;
   margin-bottom: 1.5em; }
 
+div {
+  display: block;
+  width: 100%; }
+
 ul, ol {
   margin: 0;
   padding-left: 1.11111rem; }
