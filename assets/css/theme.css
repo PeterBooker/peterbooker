@@ -436,6 +436,8 @@ textarea {
   padding: 0;
   overflow: hidden;
   width: 100%; }
+  .content-area pre {
+    background-color: #f1f1f1; }
 
 @media only screen and (min-width: 1024px) {
   .content-area {
@@ -1175,8 +1177,7 @@ blockquote {
 address {
   margin: 0 0 1.5em; }
 
-pre,
-body pre {
+pre {
   display: block;
   background-color: #f1f1f1;
   font-family: "Courier 10 Pitch", Courier, monospace;
