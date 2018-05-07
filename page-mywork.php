@@ -41,7 +41,12 @@ get_header();
 						<div class="entry-content grid container">
 							<div class="box small-12">
 								<div class="intro">
-									<?php the_content(); ?>
+									<?php
+									while ( have_posts() ) :
+										the_post();
+										the_content();
+									endwhile;
+									?>
 								</div>
 							</div>
 							<div class="box small-12">
