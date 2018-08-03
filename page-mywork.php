@@ -56,7 +56,7 @@ get_header();
 										<div class="work">
 											<h2 class="work-title">WPDirectory <span class="label warning">Beta</span></h2>
 											<div class="tech">Go, React, Trigram Index, Regex Automata</div>
-											<p>WPDirectory is a web tool which allows lightning fast regex searches of the entire WordPress Plugin and Theme Directories. It is the natural evolution of the WPDS CLI tool, removing the need for thousands of people to locally replicate the Plugin/Theme Directories.</p>
+											<p>WPDirectory is a web tool which allows lightning fast regex searches of the entire WordPress Plugin and Theme Directories. Reducing delays in decision-making across WordPress Core teams and encourages uses, from security research to development, which were not feasible before.</p>
 											<a class="button" href="https://wpdirectory.net/" target="_blank">View</a>
 											<a class="button" href="https://github.com/wpdirectory/wpdir" target="_blank">Source</a>
 										</div>
