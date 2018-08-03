@@ -52,7 +52,7 @@ get_header();
 							<div class="box small-12">
 								<div class="mywork grid margin-x margin-y">
 
-									<div class="small-12 medium-6">
+									<div class="box small-12 medium-6">
 										<div class="work">
 											<h2 class="work-title">WPDirectory <span class="label secondary">Beta</span></h2>
 											<div class="tech">Go, React, Trigram Index, Regex Automata</div>
@@ -62,7 +62,7 @@ get_header();
 										</div>
 									</div>
 
-									<div class="small-12 medium-6">
+									<div class="box small-12 medium-6">
 										<div class="work">
 											<h2 class="work-title">WPDS</h2>
 											<div class="tech">Go, CLI</div>
@@ -72,7 +72,7 @@ get_header();
 										</div>
 									</div>
 
-									<div class="small-12 medium-6">
+									<div class="box small-12 medium-6">
 										<div class="work">
 											<h2 class="work-title">mtStats <span class="label secondary">Early Prototype</span></h2>
 											<div class="tech">React, Go</div>
