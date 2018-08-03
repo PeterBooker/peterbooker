@@ -54,7 +54,7 @@ get_header();
 
 									<div class="small-12 medium-6">
 										<div class="work">
-											<h2 class="work-title">WPDirectory <span class="label info">Beta</span></h2>
+											<h2 class="work-title">WPDirectory <span class="label secondary">Beta</span></h2>
 											<div class="tech">Go, React, Trigram Index, Regex Automata</div>
 											<p>WPDirectory is a web tool which allows lightning fast regex searches of the entire WordPress Plugin and Theme Directories. Reducing delays in decision-making across WordPress Core teams and encourages uses, from security research to development, which were not feasible before.</p>
 											<a class="button" href="https://wpdirectory.net/" target="_blank">View</a>
@@ -74,7 +74,7 @@ get_header();
 
 									<div class="small-12 medium-6">
 										<div class="work">
-											<h2 class="work-title">mtStats <span class="label info">Early Prototype</span></h2>
+											<h2 class="work-title">mtStats <span class="label secondary">Early Prototype</span></h2>
 											<div class="tech">React, Go</div>
 											<p>mtStats is a fantasy betting and encylopedia website for MMA (Mixed Martial Arts). It seeks to encourage positive engagement in the MMA community.</p>
 											<a class="button" href="https://github.com/mtstats/mtstats" target="_blank">Source</a>
