@@ -114,6 +114,16 @@ function pb_scripts() {
 	);
 	wp_register_style( 'google_fonts', add_query_arg( $query_args, "//fonts.googleapis.com/css" ), array(), null );
 
+	if ( is_page() || is_singular( 'post' ) ) {
+		wp_enqueue_script( 'dd-tooltips', 'https://dota.peterbooker.com/assets/latest/ddtips.js', array(), '1.0.1', true );
+		wp_localize_script( 'dd-tooltips', 'ddConfig', array(
+			'Lang'          => 'en', // TODO: Integrate with i18n plugins.
+			'Theme'         => 'default',
+			'ShowLore'      => true,
+			'IncludeStyles' => true,
+		) );
+	}
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
